@@ -1,0 +1,134 @@
+/* reservar.component.css */
+
+#abaixo_header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 19px; /* Ajuste conforme necessário */
+}
+
+#abaixo_header p {
+    margin: 0; /* Remova as margens padrão do parágrafo */
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6A50A7, #394584);
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.laboratorios-container {
+    width: 320px;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 0 10px;
+}
+
+.laboratorios-list {
+    list-style: none;
+    padding: 0;
+}
+
+.laboratorios-list li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.laboratorios-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.formulario-container {
+    width: 320px;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 0 10px;
+    display: none;
+}
+
+.formulario-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-container label,
+.formulario-container input,
+.formulario-container textarea {
+    margin-bottom: 10px;
+}
+
+.calendario-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 5px;
+    display: none;
+}
+
+.dia {
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dia:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #1d1d1d;
+    left: 0;
+    width: auto;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+    margin-top: 20px;
+    /* Ajuste a margem superior do rodapé */
+}
+
+.reservas-container {
+    width: 320px;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+.reservas-list {
+    list-style-type: none;
+}
+
+
+
+/* Adicione aqui os estilos específicos para os componentes reservar, se necessário */

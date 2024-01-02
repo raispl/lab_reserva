@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6A50A7, #394584);
+    color: #fff;
+  }
+
+  footer {
+    background-color: #1d1d1d;
+    left: 0;
+    width: auto;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+    margin-top: 20px; /* Ajuste a margem superior do rodapé */
+  }
+
+  .project-info p{
+    text-align: justify;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste a margem inferior do cabeçalho */
+    justify-content:space-around;
+  }
+
+  header > nav > img {
+    margin-right: 250px;
+  }
+
+  header img {
+    height: 50px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 200px;
+    margin: 0;
+    
+  }
+
+  nav li {
+
+    font-size: 18px;
+    
+  }
+  nav a{
+    color: #fff;;
+  }
+
+  main {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin-top: 70px; /* Espaçamento para evitar sobreposição com o cabeçalho fixo */
+    margin-bottom: 20px; /* Ajuste a margem inferior do corpo */
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  .project-info, .login-container, .signup-container {
+    width: 550px; /* Largura fixa */
+    height: 400px; /* Altura fixa */
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 0 10px; /* Adicionei margem em ambos os lados */
+  }
+
+  .project-info{
+    text-align: center;
+  }
+
+  .signup-container {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #394584, #6A50A7);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(to right, #6A50A7, #394584);
+  }
+
+  p a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  p a:hover {
+    color: #251744;
+    font-weight: 510;
+  }

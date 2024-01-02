@@ -1,0 +1,139 @@
+<body>
+    <div id="abaixo_header">
+        <p>Logado como: {{this.nomeUsuario}}</p>
+        <!-- Outros conteúdos da barra superior... -->
+    </div>
+    <!-- reservar.component.html -->
+
+    <main>
+        <div class="laboratorios-container">
+            <h2>Laboratórios</h2>
+            <ul class="laboratorios-list">
+                <li data-laboratorio="LabRedes" (click)="exibirFormCalen('LabRedes')">Laboratório de Redes</li>
+                <li data-laboratorio="Lab1" (click)="exibirFormCalen('Lab1')">Laboratório de Informática 1</li>
+                <li data-laboratorio="Lab2" (click)="exibirFormCalen('Lab2')">Laboratório de Informática 2</li>
+                <li data-laboratorio="Lab3" (click)="exibirFormCalen('Lab3')">Laboratório de Informática 3</li>
+                <li data-laboratorio="Lab4" (click)="exibirFormCalen('Lab4')">Laboratório de Informática 4</li>
+            </ul>
+        </div>
+
+        <!-- labRedes -->
+        <div class="formulario-container" id="formularioLabRedes" style="display: none;">
+            <h2>Formulário de Reserva do Lab de Redes</h2>
+            <form #formularioLabRedesRef="ngForm">
+                <label for="dataInicioLabRedes">Data de Início:</label>
+                <input type="date" id="dataInicioLabRedes" name="dataInicio" ngModel required>
+
+                <label for="horaInicioLabRedes">Hora de Início:</label>
+                <input type="time" id="horaInicioLabRedes" name="horaInicio" ngModel required>
+
+                <label for="horaFimLabRedes">Hora de Fim:</label>
+                <input type="time" id="horaFimLabRedes" name="horaFim" ngModel required>
+
+                <label for="justificativaLabRedes">Justificativa:</label>
+                <textarea id="justificativaLabRedes" name="justificativa" ngModel rows="4" required></textarea>
+
+                <button type="button" (click)="reservarLaboratorio('LabRedes', formularioLabRedesRef)">Reservar</button>
+            </form>
+        </div>
+
+        <!-- lab1 -->
+        <div class="formulario-container" id="formularioLab1" style="display: none;">
+            <h2>Formulário de Reserva do Lab de Informática 1</h2>
+            <form #formularioLab1Ref="ngForm">
+                <label for="dataInicioLab1">Data de Início:</label>
+                <input type="date" id="dataInicioLab1" name="dataInicio" ngModel required>
+
+                <label for="horaInicioLab1">Hora de Início:</label>
+                <input type="time" id="horaInicioLab1" name="horaInicio" ngModel required>
+
+                <label for="horaFimLab1">Hora de Fim:</label>
+                <input type="time" id="horaFimLab1" name="horaFim" ngModel required>
+
+                <label for="justificativaLab1">Justificativa:</label>
+                <textarea id="justificativaLab1" name="justificativa" ngModel rows="4" required></textarea>
+
+                <button type="button" (click)="reservarLaboratorio('Lab1', formularioLab1Ref)">Reservar</button>
+            </form>
+        </div>
+
+        <!-- lab2 -->
+        <div class="formulario-container" id="formularioLab2" style="display: none;">
+            <h2>Formulário de Reserva do Lab de Informática 2</h2>
+            <form #formularioLab2Ref="ngForm">
+                <label for="dataInicioLab2">Data de Início:</label>
+                <input type="date" id="dataInicioLab2" name="dataInicio" ngModel required>
+
+                <label for="horaInicioLab2">Hora de Início:</label>
+                <input type="time" id="horaInicioLab2" name="horaInicio" ngModel required>
+
+                <label for="horaFimLab2">Hora de Fim:</label>
+                <input type="time" id="horaFimLab2" name="horaFim" ngModel required>
+
+                <label for="justificativaLab2">Justificativa:</label>
+                <textarea id="justificativaLab2" name="justificativa" ngModel rows="4" required></textarea>
+
+                <button type="button" (click)="reservarLaboratorio('Lab2', formularioLab2Ref)">Reservar</button>
+            </form>
+        </div>
+
+        <!-- lab3 -->
+        <div class="formulario-container" id="formularioLab3" style="display: none;">
+            <h2>Formulário de Reserva do Lab de Informática 3</h2>
+            <form #formularioLab3Ref="ngForm">
+                <label for="dataInicioLab3">Data de Início:</label>
+                <input type="date" id="dataInicioLab3" name="dataInicio" ngModel required>
+
+                <label for="horaInicioLab3">Hora de Início:</label>
+                <input type="time" id="horaInicioLab3" name="horaInicio" ngModel required>
+
+                <label for="horaFimLab3">Hora de Fim:</label>
+                <input type="time" id="horaFimLab3" name="horaFim" ngModel required>
+
+                <label for="justificativaLab3">Justificativa:</label>
+                <textarea id="justificativaLab3" name="justificativa" ngModel rows="4" required></textarea>
+
+                <button type="button" (click)="reservarLaboratorio('Lab3', formularioLab3Ref)">Reservar</button>
+            </form>
+        </div>
+
+        <!-- lab4 -->
+        <div class="formulario-container" id="formularioLab4" style="display: none;">
+            <h2>Formulário de Reserva do Lab de Informática 4</h2>
+            <form #formularioLab4Ref="ngForm">
+                <label for="dataInicioLab4">Data de Início:</label>
+                <input type="date" id="dataInicioLab4" name="dataInicio" ngModel required>
+
+                <label for="horaInicioLab4">Hora de Início:</label>
+                <input type="time" id="horaInicioLab4" name="horaInicio" ngModel required>
+
+                <label for="horaFimLab4">Hora de Fim:</label>
+                <input type="time" id="horaFimLab4" name="horaFim" ngModel required>
+
+                <label for="justificativaLab4">Justificativa:</label>
+                <textarea id="justificativaLab4" name="justificativa" ngModel rows="4" required></textarea>
+
+                <button type="button" (click)="reservarLaboratorio('Lab4', formularioLab4Ref)">Reservar</button>
+            </form>
+        </div>
+
+        <div *ngIf="laboratorioAtual" class="reservas-container">
+            <h2>Reservas do Laboratório</h2>
+            <ul class="reservas-list">
+                <li *ngFor="let reserva of reservasLaboratorio">
+                    Data de reserva: {{ reserva.data_reserva | date: 'dd/MM/yyyy'}} <br> Horário: {{
+                    reserva.horario_inicio }} até {{
+                    reserva.horario_fim }} <br> Matricula: {{ reserva.matricula }}
+                </li>
+            </ul>
+        </div>
+
+        <p *ngIf="mensagemErroReserva" class="mensagem-erro">{{ mensagemErroReserva }}</p>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: Emine Aissa, João Victor Batista e Raissa Laura</p>
+    </footer>
+
+</body>

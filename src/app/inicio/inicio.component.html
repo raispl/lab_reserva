@@ -1,0 +1,67 @@
+<body>
+    <main>
+        <div class="project-info">
+            <h2>Sobre o Projeto</h2>
+            <p>O site "LabReserva" é um software desenvolvido para o projeto final das disciplinas de PPI e PDS. Ele é
+                um protótipo destinado à reserva de laboratórios de informática do IFRN Campus Parnamirim.</p>
+            <div class="imagemsobre"><img src="../../assets/1.png"></div>
+        </div>
+
+        <div class="login-container">
+            <h2>Faça Login</h2>
+            <!-- Formulário de Login -->
+            <form (submit)="fazerLogin($event)" #loginForm>
+                <!-- Campos de Login -->
+                <label for="loginMatricula">Matrícula:</label>
+                <input type="text" id="loginMatricula" name="loginMatricula" required [(ngModel)]="usuario.matricula">
+
+                <label for="loginSenha">Senha:</label>
+                <input type="password" id="loginSenha" name="loginSenha" required [(ngModel)]="usuario.senha">
+
+                <!-- Botão de Login -->
+                <button type="submit">Entrar</button>
+            </form>
+
+
+
+            <!-- Link para Cadastro -->
+            <p>Não tem uma conta? <a href="#" (click)="mostrarCadastro($event)">Cadastre-se aqui</a></p>
+        </div>
+        <!-- Exibir a mensagem de erro -->
+
+        <p *ngIf="mensagemErroLogin" class="mensagem-erro">{{ mensagemErroLogin }}</p>
+
+
+        <!-- inicio.component.html -->
+
+        <div class="signup-container">
+            <h2>Cadastre-se</h2>
+            <!-- Formulário de Cadastro -->
+            <form (submit)="cadastrarUsuario()">
+
+                <!-- Campos de Cadastro -->
+                <label for="nome">Nome*:</label>
+                <input type="text" id="nome" name="nome" [(ngModel)]="usuario.nome" required>
+
+                <label for="matricula">Matrícula*:</label>
+                <input type="text" id="matricula" name="matricula" [(ngModel)]="usuario.matricula" required>
+
+                <label for="senha">Senha*:</label>
+                <input type="password" id="senha" name="senha" [(ngModel)]="usuario.senha" required>
+
+                <!-- Botão de Cadastro -->
+                <button type="submit">Cadastrar</button>
+            </form>
+            <!-- Link para Login -->
+            <p>Já tem uma conta? <a href="#" (click)="mostrarLogin()">Faça login aqui</a></p>
+        </div>
+        <div *ngIf="mensagemErro" class="mensagem-erro">
+            {{ mensagemErro }}
+          </div>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: Emine Aissa, João Victor Batista e Raissa Laura</p>
+    </footer>
+</body>
